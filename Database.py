@@ -13,7 +13,7 @@ import sqlalchemy
 class Database():
     def __init__(self):
         try:
-            self.conn = "DRIVER={SQL Server Native Client 11.0};SERVER=CA094A;DATABASE=Scipio;Trusted_Connection=yes;"
+            self.conn = "DRIVER={SQL Server Native Client 11.0};SERVER=#######;DATABASE=QWERTY;Trusted_Connection=yes;"
             quoted = quote_plus(self.conn)
             self.new_con = 'mssql+pyodbc:///?odbc_connect={}'.format(quoted)
             self.engine = create_engine(self.new_con,fast_executemany=True)
